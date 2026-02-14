@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0a0f1f, #111827);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+.background-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255,255,255,0.05) 2px, transparent 2px);
+  background-size: 60px 60px;
+  opacity: 0.2;
+}
+
+.background-pattern img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card {
+  position: relative;
+  width: 850px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+.left-section {
+  flex: 1;
+}
+
+.profile-placeholder {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border: 2px dashed rgba(255,255,255,0.4);
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.welcome {
+  font-size: 12px;
+  letter-spacing: 3px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: "Oxanium", sans-serif;
+  font-style: normal;
+  color: yellow;
+}
+
+.tagline {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-btn {
+  border: none;
+  border-radius: 30px;
+  padding: 15px 25px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  color: white;
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.instagram {
+  background: linear-gradient(90deg, #fd1d1d, #e1306c, #c13584, #833ab4);
+}
+
+.discord {
+  background: linear-gradient(90deg, #5865f2, #8b5cf6);
+}
+
+.whatsapp {
+  background: linear-gradient(90deg, #1ebe5d, #0f9d58);
+}
+
+.reddit {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+
+.icon {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  .card {
+    flex-direction: column;
+    padding: 25px;
+    gap: 25px;
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: -300px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .tagline {
+    font-size: 13px;
+  }
+
+  .social-btn {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .icon svg {
+    width: 16px;
+    height: 16px;
+  }
+}

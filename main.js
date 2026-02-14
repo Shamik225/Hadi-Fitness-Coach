@@ -1,0 +1,9 @@
+document.querySelectorAll(".social-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const url = button.getAttribute("data-url");
+
+    if (url) {
+        window.open(url, "_blank");
+    }
+  });
+});
